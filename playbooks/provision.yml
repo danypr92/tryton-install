@@ -1,0 +1,17 @@
+---
+- name: provision
+  hosts: odoo_servers
+
+  roles:
+    - role: common
+      tags: common
+
+    # Need install postgresql, then create a postgres user named like your login
+    - role: geerlingguy.postgresql
+      become: yes
+      tags: postgresql
+
+    # Install npm and less CSS
+    #- role: nodejs
+      #tags: nodejs
+

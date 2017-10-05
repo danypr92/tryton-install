@@ -1,0 +1,21 @@
+---
+- name: install common packages
+  apt:
+    pkg={{ item }}
+    state=present
+  become: yes
+  with_items:
+    - git
+    - mercurial
+    - python-dev
+    - virtualenv
+    - libxml2
+    - libxml2-dev
+    - libxslt1-dev
+    - build-essential
+# For custom modules
+    - enchant
+    - libffi-dev
+    - libssl-dev
+    - libldap2-dev
+    - libsasl2-dev

@@ -1,0 +1,5 @@
+[lxc]
+local.tryton.org
+
+[odoo_servers:children]
+lxc

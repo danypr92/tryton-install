@@ -1,0 +1,15 @@
+---
+
+# User name and password for running ansible on host
+# user: odoo
+
+
+# Use correct python2.7 interpeter
+ansible_python_interpreter: "/usr/bin/python2.7"
+
+postgresql_users:
+  - name: "ubuntu"
+    role_attr_flags: CREATEDB
+
+postgresql_databases:
+  - name: "tryton-db"
