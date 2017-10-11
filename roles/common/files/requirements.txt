@@ -1,0 +1,12 @@
+# Tryton requirenments
+Genshi==0.7
+lxml==2.0
+python-dateutil
+polib
+python-sql==0.9
+setuptools==36.5.0
+# relatorio==0.2.0
+# Postgres db
+http://pypi.python.org/packages/source/p/psycopg2/psycopg2-2.4.tar.gz #pyscopg2
+fabric
+flask-login

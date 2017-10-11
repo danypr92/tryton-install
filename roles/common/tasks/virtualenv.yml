@@ -8,13 +8,18 @@
   command: virtualenv "{{ ansible_env.HOME }}/.eticom-venv" creates="{{ ansible_env.HOME }}/.eticom-venv"
   when: env.stat.isdir is undefined
 
-- name: copy seeds.rb
+- name: copy requirements
   copy:
     src=requirements.txt
     dest={{ ansible_env.HOME }}/requirements.txt
-    owner=ubuntu
 
 - name: Install requirements
   pip:
     requirements: "{{ ansible_env.HOME }}/requirements.txt"
+    virtualenv: "{{ ansible_env.HOME }}/.eticom-venv"
+
+- name: Install relatorio
+  pip:
+    name: relatorio
+    version: 0.7.1
     virtualenv: "{{ ansible_env.HOME }}/.eticom-venv"
