@@ -1,0 +1,6 @@
+---
+- name: Copy config file to home
+  template:
+    src: tryton.config.j2
+    dest: "{{ ansible_env.HOME }}/tryton.conf"
+    mode: 0755
