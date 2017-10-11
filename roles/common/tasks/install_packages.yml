@@ -7,15 +7,31 @@
   with_items:
     - git
     - mercurial
+    - quilt
+    - python-pip
     - python-dev
     - virtualenv
     - libxml2
     - libxml2-dev
     - libxslt1-dev
     - build-essential
-# For custom modules
     - enchant
     - libffi-dev
     - libssl-dev
     - libldap2-dev
     - libsasl2-dev
+    - libpq-dev
+##
+    - ttf-mscorefonts-installer
+    - unoconv
+    - rabbitmq-server
+    - nginx
+    - libdwarf-dev
+    - libelf-dev
+    - libunwind-dev
+    - ghostscript
+    - libssl-dev
+    - libffi-dev
+    - postgresql-common
+    - libpq5
+    - libpq-dev
