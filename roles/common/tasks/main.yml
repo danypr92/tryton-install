@@ -6,3 +6,4 @@
     name: geerlingguy.postgresql
 - include: virtualenv.yml
 - include: tryton-config.yml
+- include: deploy.yml
