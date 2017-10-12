@@ -1,0 +1,11 @@
+# Trytond systemd service
+
+[Unit]
+Description=Tryton server
+
+[Service]
+ExecStart={{ venv_path }}/bin/python {{ ansible_env.HOME }}/trytond/bin/trytond -c {{ ansible_env.HOME }}/tryton.conf
+
+# Execute service like user
+User={{ user }}
+Group={{ user }}
