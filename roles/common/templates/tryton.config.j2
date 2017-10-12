@@ -3,5 +3,5 @@ uri = postgresql:///
 path = /var/lib/trytond
 
 [jsonrpc]
-listen = 10.0.3.9:8000
-hostname = local.tryton.org
+listen = {{ ansible_default_ipv4.address }}:8000
+hostname = {{ inventory_hostname }}
