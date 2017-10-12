@@ -1,11 +1,13 @@
 ---
 
 # User name and password for running ansible on host
-# user: odoo
+user: ubuntu
 
 
 # Use correct python2.7 interpeter
 ansible_python_interpreter: "/usr/bin/python2.7"
+
+venv_path: "{{ ansible_env.HOME }}/.venv"
 
 postgresql_users:
   - name: "ubuntu"
