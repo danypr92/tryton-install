@@ -1,6 +1,6 @@
 [database]
 uri = postgresql:///
-path = /var/lib/trytond
+path = {{ ansible_env.HOME }}/.trytond
 
 [jsonrpc]
 listen = {{ ansible_default_ipv4.address }}:8000
