@@ -1,7 +1,7 @@
 ---
-- name: Clone eticom-root
+- name: Clone repository
   hg:
-    repo: https://hg.tryton.org/trytond/
-    #repo: ssh://danypr92@bitbucket.org/nantic/root-eticom
+    repo: "{{ repository }}"
     dest: "{{ ansible_env.HOME }}/trytond"
+    revision: "{{ branch }}"
     purge: yes

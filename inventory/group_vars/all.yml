@@ -3,6 +3,8 @@
 # User name and password for running ansible on host
 user: ubuntu
 
+repository: https://hg.tryton.org/trytond
+branch: 3.8
 
 # Use correct python2.7 interpeter
 ansible_python_interpreter: "/usr/bin/python2.7"
@@ -10,7 +12,7 @@ ansible_python_interpreter: "/usr/bin/python2.7"
 venv_path: "{{ ansible_env.HOME }}/.venv"
 
 postgresql_users:
-  - name: "ubuntu"
+  - name: "{{ ansible_user }}"
     role_attr_flags: CREATEDB
 
 postgresql_databases:
