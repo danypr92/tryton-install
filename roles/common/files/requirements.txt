@@ -4,6 +4,6 @@ python-dateutil
 polib
 python-sql==0.9
 setuptools==36.5.0
-http://pypi.python.org/packages/source/p/psycopg2/psycopg2-2.4.tar.gz #pyscopg2
+https://pypi.python.org/packages/source/p/psycopg2/psycopg2-2.4.tar.gz #pyscopg2
 fabric
 flask-login
