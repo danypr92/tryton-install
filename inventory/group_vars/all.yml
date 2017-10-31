@@ -35,7 +35,6 @@ install_pkgs:
     - libldap2-dev
     - libsasl2-dev
     - libpq-dev
-##
     - ttf-mscorefonts-installer
     - unoconv
     - rabbitmq-server
