@@ -90,7 +90,7 @@ You can use `scripts/create_role.sh` script to manage the createation:
 ```sh
 > scripts/create_container.sh
 ```
-At end of run, we have a container with SSH access for `root`.
+At end of script, it plays the `sys_admins.yml` playbook and generate the sys admins users.
 
 To change the default values of the script variables look at `scripts/config/lxc.cfg` file.
 
