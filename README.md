@@ -22,6 +22,39 @@ We use the next roles:
 
  - [postgresql](https://galaxy.ansible.com/geerlingguy/postgresql/) v1.3.1
 
+# Playbooks
+
+# Sys Admins `playbooks/sys_admins.yml`
+
+This playbook manages the sysadmin users.
+
+**Need user with `sudo` access without password**
+
+Add your `sys_admins` list in your `inventory/hosy_vars/` file.
+
+`sys_admins` is a list of maps. Need tree keys: `name`, `ssh_key` and `state`:
+
+```YAML
+# ./inventory/host_vars/local.tryton.org/config.yml
+...
+
+sys_admins:
+  - name: tryton
+    ssh_key: "~/.ssh/id_rsa.pub"
+    state: present
+  - name: "{{ development_user }}"
+    ssh_key: "~/.ssh/id_rsa.pub"
+    state: present
+
+...
+```
+
+To execute the playbook run:
+```
+> ansible-playbook playbooks/sys_admins.yml -u root --limit=dev -v
+```
+Change `root` for your user.
+
 ## Usage example
 
 Configure your hosts and group vars:
@@ -57,10 +90,6 @@ You can use lxc-scripts to create it:
 ```sh
 lxc-scripts/lxc-create.sh -n tryton-test -h local.tryton.org
 ```
-
-## Release History
-
-## Meta
 
 ## Contributing
 

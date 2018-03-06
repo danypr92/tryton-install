@@ -1,7 +1,5 @@
 ---
-
-# User name and password for running ansible on host
-user: ubuntu
+development_user: "{{ lookup('env', 'USER') }}"
 
 repository: https://hg.tryton.org/trytond
 branch: 3.8
