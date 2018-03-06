@@ -85,11 +85,14 @@ ansible-playbook playbooks/provision.yml -u ubuntu
 
 If you need a development environment you can create a [LXC](https://linuxcontainers.org/lxc/introduction/) container to easy create and destroy it.
 
-You can use lxc-scripts to create it:
+You can use `scripts/create_role.sh` script to manage the createation:
 
 ```sh
-lxc-scripts/lxc-create.sh -n tryton-test -h local.tryton.org
+> scripts/create_container.sh
 ```
+At end of run, we have a container with SSH access for `root`.
+
+To change the default values of the script variables look at `scripts/config/lxc.cfg` file.
 
 ## Contributing
 
