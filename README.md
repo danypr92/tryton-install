@@ -10,13 +10,19 @@ This project has been thinked to run in Ubuntu 16.04 (Xenial).
 
 You can find more information about Ansible [here](http://docs.ansible.com/)
 
-## Usage example
+### Ansible Community Roles
 
-Download community roles:
+Download Ansible community roles:
 
 ```sh
-bin/setup.sh
+ansible-galaxy install -r requirements.yml
 ```
+
+We use the next roles:
+
+ - [postgresql](https://galaxy.ansible.com/geerlingguy/postgresql/) v1.3.1
+
+## Usage example
 
 Configure your hosts and group vars:
 
