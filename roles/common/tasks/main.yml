@@ -1,7 +1,6 @@
 ---
 - include: install_packages.yml
 - include: install_java.yml
-  become: yes
 - name: install postgres
   become: yes
   include_role:
