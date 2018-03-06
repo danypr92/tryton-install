@@ -1,6 +1,6 @@
 ---
 - name: provision
-  hosts: odoo_servers
+  hosts: tryton
 
   roles:
     - role: common
