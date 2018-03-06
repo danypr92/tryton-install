@@ -7,5 +7,5 @@ Description=Tryton server
 ExecStart={{ venv_path }}/bin/python {{ ansible_env.HOME }}/trytond/bin/trytond -c {{ ansible_env.HOME }}/tryton.conf -d tryton-db
 
 # Execute service like user
-User={{ user }}
-Group={{ user }}
+User={{ development_user }}
+Group={{ development_user }}
