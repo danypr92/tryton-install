@@ -9,13 +9,6 @@ ansible_python_interpreter: "/usr/bin/python2.7"
 
 venv_path: "{{ ansible_env.HOME }}/.venv"
 
-postgresql_users:
-  - name: "{{ ansible_user }}"
-    role_attr_flags: CREATEDB
-
-postgresql_databases:
-  - name: "tryton-db"
-
 install_pkgs:
     - git
     - mercurial
