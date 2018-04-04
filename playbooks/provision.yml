@@ -6,4 +6,13 @@
     - role: common
       become: yes
       tags: common
+    - role: geerlingguy.postgresql
+      become: yes
+      vars:
+        postgresql_users:
+          - name: "{{ tryton_user }}"
+            role_attr_flags: CREATEDB
+        postgresql_databases:
+          - name: "{{ database_name }}"
+      tags: db
 
