@@ -8,32 +8,3 @@ branch: 3.8
 ansible_python_interpreter: "/usr/bin/python2.7"
 
 venv_path: "{{ ansible_env.HOME }}/.virtualenvs/tryton"
-
-install_pkgs:
-    - git
-    - mercurial
-    - quilt
-    - python-pip
-    - python-dev
-    - virtualenv
-    - libxml2
-    - libxml2-dev
-    - libxslt1-dev
-    - build-essential
-    - enchant
-    - libffi-dev
-    - libssl-dev
-    - libldap2-dev
-    - libsasl2-dev
-    - libpq-dev
-    - unoconv
-    - rabbitmq-server
-    - nginx
-    - libdwarf-dev
-    - libelf-dev
-    - libunwind-dev
-    - ghostscript
-    - libssl-dev
-    - libffi-dev
-    - libpq5
-    - libpq-dev

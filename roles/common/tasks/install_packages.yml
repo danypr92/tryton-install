@@ -5,4 +5,32 @@
     state=present
   become: yes
   with_items:
-    "{{ install_pkgs }}"
+    - git
+    - mercurial
+    - quilt
+    - python-pip
+    - python-dev
+    - virtualenv
+    - libxslt-dev
+    - lib32z1-dev
+    - libxml2
+    - libxml2-dev
+    - libxslt1-dev
+    - build-essential
+    - enchant
+    - libffi-dev
+    - libssl-dev
+    - libldap2-dev
+    - libsasl2-dev
+    - libpq-dev
+    - unoconv
+    - rabbitmq-server
+    - nginx
+    - libdwarf-dev
+    - libelf-dev
+    - libunwind-dev
+    - ghostscript
+    - libssl-dev
+    - libffi-dev
+    - libpq5
+    - libpq-dev
