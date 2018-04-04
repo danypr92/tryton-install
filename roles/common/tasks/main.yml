@@ -1,8 +1,5 @@
 ---
 - include: install_packages.yml
   become: yes
-#- include: install_java.yml
 - include: virtualenv.yml
 - include: tryton-config.yml
-- include: deploy.yml
-- include: service.yml
