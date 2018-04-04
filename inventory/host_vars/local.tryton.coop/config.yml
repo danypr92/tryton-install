@@ -1,4 +1,5 @@
 ---
+# Sysadmins
 sys_admins:
   - name: tryton
     ssh_key: "~/.ssh/id_rsa.pub"
@@ -6,3 +7,7 @@ sys_admins:
   - name: "{{ development_user }}"
     ssh_key: "~/.ssh/id_rsa.pub"
     state: present
+
+# Postgresql vars
+tryton_user: tryton
+database_name: tryton

@@ -1,5 +1,5 @@
 [dev]
-local.tryton.org
+local.tryton.coop
 
 [tryton:children]
 dev

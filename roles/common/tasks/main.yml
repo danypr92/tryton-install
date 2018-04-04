@@ -1,10 +1,15 @@
 ---
 - include: install_packages.yml
-- include: install_java.yml
-- name: install postgres
-  become: yes
+#- include: install_java.yml
+- name: install postgresql
   include_role:
     name: geerlingguy.postgresql
+  vars:
+    postgresql_users:
+      - name: "{{ tryton_user }}"
+        role_attr_flags: CREATEDB
+    postgresql_databases:
+      - name: "{{ database_name }}"
 - include: virtualenv.yml
 - include: tryton-config.yml
 - include: deploy.yml
