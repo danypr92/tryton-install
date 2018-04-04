@@ -4,7 +4,6 @@
 
   roles:
     - role: common
-      become: yes
       tags: common
     - role: geerlingguy.postgresql
       become: yes
