@@ -7,7 +7,7 @@ branch: 3.8
 # Use correct python2.7 interpeter
 ansible_python_interpreter: "/usr/bin/python2.7"
 
-venv_path: "{{ ansible_env.HOME }}/.venv"
+venv_path: "{{ ansible_env.HOME }}/.trytond"
 
 postgresql_users:
   - name: "{{ ansible_user }}"
@@ -33,7 +33,6 @@ install_pkgs:
     - libldap2-dev
     - libsasl2-dev
     - libpq-dev
-    - ttf-mscorefonts-installer
     - unoconv
     - rabbitmq-server
     - nginx
@@ -43,6 +42,5 @@ install_pkgs:
     - ghostscript
     - libssl-dev
     - libffi-dev
-    - postgresql-common
     - libpq5
     - libpq-dev

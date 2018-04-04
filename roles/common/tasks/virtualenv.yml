@@ -5,7 +5,7 @@
   register: env
 
 - name: Manually create the initial virtualenv
-  command: virtualenv "{{ venv_path }}" creates="{{ venv_path }}"
+  command: "virtualenv {{ venv_path }} creates={{ venv_path }}"
   when: env.stat.isdir is undefined
 
 - name: copy requirements
