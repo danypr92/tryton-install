@@ -1,6 +1,44 @@
 ---
-- name: Copy config file to home
+- name: Create trytond directory in /etc/
+  become: yes
+  file:
+    path: /etc/trytond/
+    state: directory
+    group: tryton
+    mode: 02775
+
+- name: Copy trytond configuration file to /etc/trytond/
   template:
-    src: tryton.config.j2
-    dest: "{{ ansible_env.HOME }}/tryton.conf"
-    mode: 0755
+    src: trytond.conf.j2
+    dest: "/etc/trytond/trytond.conf"
+    group: tryton
+    mode: 0775
+
+- name: Copy cron configuration file to /etc/trytond/
+  template:
+    src: trytond-cron.conf.j2
+    dest: "/etc/trytond/trytond-cron.conf"
+    group: tryton
+    mode: 0775
+
+- name: Copy trytond log configuration file to /etc/trytond/
+  template:
+    src: trytond.logconf.j2
+    dest: "/etc/trytond/trytond.logconf"
+    group: tryton
+    mode: 0775
+
+- name: Copy cron log configuration file to /etc/trytond/
+  template:
+    src: trytond-cron.logconf.j2
+    dest: "/etc/trytond/trytond-cron.logconf"
+    group: tryton
+    mode: 0775
+
+- name: Create /var/log/trytond directory
+  become: yes
+  file:
+    path: /var/log/trytond/
+    state: directory
+    group: tryton
+    mode: 02775

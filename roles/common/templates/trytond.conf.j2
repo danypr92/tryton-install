@@ -3,5 +3,5 @@ uri = postgresql:///
 path = {{ ansible_env.HOME }}/.trytond
 
 [jsonrpc]
-listen = {{ ansible_default_ipv4.address }}:8000
+listen = *:8000
 hostname = {{ inventory_hostname }}

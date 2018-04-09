@@ -1,0 +1,7 @@
+[database]
+uri = postgresql:///
+path = {{ ansible_env.HOME }}/.trytond
+
+[jsonrpc]
+listen = *:8000
+hostname = {{ inventory_hostname }}
