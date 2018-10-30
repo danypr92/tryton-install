@@ -1,0 +1,8 @@
+---
+# Sysadmins
+sys_admins:
+
+# Postgresql vars
+tryton_user: eticom
+database_name: eticom
+

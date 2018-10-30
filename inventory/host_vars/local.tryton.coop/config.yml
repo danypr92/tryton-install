@@ -8,6 +8,11 @@ sys_admins:
     ssh_key: "~/.ssh/id_rsa.pub"
     state: present
 
+# Tryton vars
+venv_path: "/home/tryton/.virtualenvs/tryton"
+tryton_path: "/opt/eticom"
+tryton_config: "trytond"
+
 # Postgresql vars
 tryton_user: tryton
 database_name: tryton

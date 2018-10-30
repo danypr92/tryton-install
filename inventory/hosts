@@ -1,5 +1,12 @@
+[production]
+eticom.nant-tic.com
+
+[staging]
+staging-web.danpalrod.xyz
+
 [dev]
 local.tryton.coop
 
 [tryton:children]
 dev
+staging

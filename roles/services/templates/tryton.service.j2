@@ -1,0 +1,8 @@
+[Unit]
+Description=Tryton server
+
+[Service]
+ExecStart={{ venv_path }}/bin/python {{ tryton_path }}/trytond/bin/trytond -c /etc/trytond/%I.conf --logconf /etc/trytond/%I.logconf
+EnvironmentFile=/etc/default/trytond
+
+User={{ tryton_user }}
