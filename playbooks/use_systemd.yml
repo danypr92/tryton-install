@@ -4,9 +4,6 @@
   roles:
     - role: tryton_configuration_files
       tags: config
-# 
-#     - name: Default Tryton variables
-#       tags: envvars
-# 
-#     - name: Tryton Service
-#       tags: service
+
+    - role: tryton_systemd_service
+      tags: service
